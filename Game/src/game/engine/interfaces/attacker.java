@@ -1,8 +1,8 @@
 package game.engine.interfaces;
 
 public class attacker {
-    private int damage;
+    private int Damage;
     public int getDamage() {
-        return damage;
+        return Damage;
     }
 }

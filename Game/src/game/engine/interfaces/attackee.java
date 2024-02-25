@@ -1,13 +1,13 @@
 package game.engine.interfaces;
 
 public class attackee {
-    private int health;
+    private int Health;
     private int ResourcesValue;
     public int getCurrentHealth() {
-        return health;
+        return Health;
     }
-    public void setCurrentHealth(int health) {
-        this.health = health;
+    public void setCurrentHealth(int Health) {
+        this.Health = Health;
     }
     public int getResourcesValue(){
         return ResourcesValue;

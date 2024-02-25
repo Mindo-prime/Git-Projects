@@ -4,12 +4,12 @@ import game.engine.Weapons.Weapons;
 
 public class VolleySpreadCannon  extends Weapons{
 
-    private final int minRange;
-    private final int maxRange;
-    public VolleySpreadCannon(int BaseDamage, int minRange, int maxRange) {
+    private final int MinRange;
+    private final int MaxRange;
+    public VolleySpreadCannon(int BaseDamage, int MinRange, int MaxRange) {
         super(BaseDamage);
-        this.maxRange = maxRange;
-        this.minRange = minRange;
+        this.MaxRange = MaxRange;
+        this.MinRange = MinRange;
     }
     
 }

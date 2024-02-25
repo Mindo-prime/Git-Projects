@@ -1,60 +1,60 @@
 package game.engine.titans;
 
 public abstract class Titan {
-    private final int basehealth;
-    private int currenthealth;
-    private final int basedamage;
-    private final int heightInMeters;
-    private int distanceFromBase;
-    private int speed;
-    private final int resourceValue;
-    private final int dangerLevel;
+    private final int Basehealth;
+    private int CurrentHealth;
+    private final int Basedamage;
+    private final int HeightInMeters;
+    private int DistanceFromBase;
+    private int Speed;
+    private final int ResourceValue;
+    private final int DangerLevel;
     
-    public Titan(int basehealth, int basedamage, int heightInMeters, int distanceFromBase, int speed, int resourceValue, int dangerLevel) {
-        this.basehealth = basehealth;
-        this.basedamage = basedamage;
-        this.heightInMeters = heightInMeters;
-        this.distanceFromBase = distanceFromBase;
-        this.speed = speed;
-        this.resourceValue = resourceValue;
-        this.dangerLevel = dangerLevel;
-        currenthealth = basehealth;
+    public Titan(int Basehealth, int Basedamage, int HeightInMeters, int DistanceFromBase, int Speed, int ResourceValue, int DangerLevel) {
+        this.Basehealth = Basehealth;
+        this.Basedamage = Basedamage;
+        this.HeightInMeters = HeightInMeters;
+        this.DistanceFromBase = DistanceFromBase;
+        this.Speed = Speed;
+        this.ResourceValue = ResourceValue;
+        this.DangerLevel = DangerLevel;
+        CurrentHealth = Basehealth;
     }
 
-    public void setCurrentHealth(int currenthealth) {
-        this.currenthealth = currenthealth;
+    public void setCurrentHealth(int CurrentHealth) {
+        this.CurrentHealth = CurrentHealth;
     }
 
     public int getCurrentHealth() {
-        return currenthealth;
+        return CurrentHealth;
     }
 
     public int getDamage() {
-        return basedamage;
+        return Basedamage;
     }
 
     public int getDistanceFromBase() {
-        return distanceFromBase;
+        return DistanceFromBase;
     }
 
-    public void setDistance(int distanceFromBase) {
-        this.distanceFromBase = distanceFromBase;
+    public void setDistance(int DistanceFromBase) {
+        this.DistanceFromBase = DistanceFromBase;
     }
 
     public int getSpeed() {
-        return speed;
+        return Speed;
     }
 
-    public void setSpeed(int speed) {
-        this.speed = speed;
+    public void setSpeed(int Speed) {
+        this.Speed = Speed;
     }
 
     public int getResouceValue() {
-        return resourceValue;
+        return ResourceValue;
     }
 
     public int compareTo(Titan anotherTitan) {
-        return distanceFromBase - anotherTitan.distanceFromBase;
+        return DistanceFromBase - anotherTitan.DistanceFromBase;
     }
     
 }
