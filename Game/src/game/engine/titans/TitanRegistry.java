@@ -1,6 +1,6 @@
 package game.engine.titans;
 
-public class TitanRegistery {
+public class TitanRegistry {
     private final int Code;
     private int BaseHealth;
     private int BaseDamage;
@@ -9,7 +9,7 @@ public class TitanRegistery {
     private int ResourceValue;
     private int DangerLevel;
 
-    public TitanRegistery(int Code, int BaseHealth, int BaseDamage, int HeightInMeters, int Speed, int ResourceValue, int DangerLevel) {
+    public TitanRegistry(int Code, int BaseHealth, int BaseDamage, int HeightInMeters, int Speed, int ResourceValue, int DangerLevel) {
         this.Code = Code;
         this.BaseHealth = BaseHealth;
         this.BaseDamage = BaseDamage;
