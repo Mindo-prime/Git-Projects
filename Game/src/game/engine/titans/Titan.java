@@ -53,6 +53,26 @@ public abstract class Titan {
         return ResourceValue;
     }
 
+    public int getBasehealth() {
+        return Basehealth;
+    }
+
+    public int getBasedamage() {
+        return Basedamage;
+    }
+
+    public int getHeightInMeters() {
+        return HeightInMeters;
+    }
+
+    public int getResourceValue() {
+        return ResourceValue;
+    }
+
+    public int getDangerLevel() {
+        return DangerLevel;
+    }
+
     public int compareTo(Titan anotherTitan) {
         return DistanceFromBase - anotherTitan.DistanceFromBase;
     }

@@ -11,5 +11,10 @@ public class VolleySpreadCannon  extends Weapons{
         this.MaxRange = MaxRange;
         this.MinRange = MinRange;
     }
-    
+    public int getMinRange() {
+        return MinRange;
+    }
+    public int getMaxRange() {
+        return MaxRange;
+    }
 }

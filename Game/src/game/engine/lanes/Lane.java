@@ -24,6 +24,18 @@ public class Lane {
         return DangerLevel;
     }
 
+    public Wall getLaneWall() {
+        return LaneWall;
+    }
+
+    public PriorityQueue<Titan> getTitans() {
+        return Titans;
+    }
+
+    public ArrayList<Weapons> getWeapons() {
+        return Weapons;
+    }
+    
     public void setDangerLevel(int DangerLevel) {
         this.DangerLevel = DangerLevel;
     }
@@ -31,4 +43,5 @@ public class Lane {
     public int compareTo(Lane AnotherLane) {
         return DangerLevel - AnotherLane.DangerLevel;
     }
+
 }
