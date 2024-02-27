@@ -1,6 +1,10 @@
 package game.engine.titans;
 
-public abstract class Titan {
+import game.engine.interfaces.attackee;
+import game.engine.interfaces.attacker;
+import game.engine.interfaces.mobil;
+
+public abstract class Titan implements attackee, attacker, mobil {
     private final int Basehealth;
     private int CurrentHealth;
     private final int Basedamage;
@@ -33,14 +37,6 @@ public abstract class Titan {
         return Basedamage;
     }
 
-    public int getDistanceFromBase() {
-        return DistanceFromBase;
-    }
-
-    public void setDistance(int DistanceFromBase) {
-        this.DistanceFromBase = DistanceFromBase;
-    }
-
     public int getSpeed() {
         return Speed;
     }
@@ -71,6 +67,14 @@ public abstract class Titan {
 
     public int getDangerLevel() {
         return DangerLevel;
+    }
+
+    public int getDistance() {
+        return DistanceFromBase;
+    }
+
+    public void setDistance(int Distance) {
+        DistanceFromBase = Distance;
     }
 
     public int compareTo(Titan anotherTitan) {
