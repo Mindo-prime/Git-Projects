@@ -4,7 +4,7 @@ import game.engine.interfaces.attackee;
 import game.engine.interfaces.attacker;
 import game.engine.interfaces.mobil;
 
-public abstract class Titan implements attackee, attacker, mobil {
+public abstract class Titan implements attackee, attacker, mobil, Comparable<Titan> {
     private final int Basehealth;
     private int CurrentHealth;
     private final int Basedamage;
@@ -78,7 +78,7 @@ public abstract class Titan implements attackee, attacker, mobil {
     }
 
     public int compareTo(Titan anotherTitan) {
-        return DistanceFromBase - anotherTitan.DistanceFromBase;
+        return this.DistanceFromBase - anotherTitan.DistanceFromBase;
     }
     
 }

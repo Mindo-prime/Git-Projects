@@ -7,7 +7,7 @@ import game.engine.Weapons.Weapons;
 import game.engine.base.Wall;
 import game.engine.titans.Titan;
 
-public class Lane {
+public class Lane implements Comparable<Lane>{
     private final Wall LaneWall;
     private int DangerLevel;
     private final PriorityQueue<Titan> Titans;
@@ -41,7 +41,7 @@ public class Lane {
     }
     
     public int compareTo(Lane AnotherLane) {
-        return DangerLevel - AnotherLane.DangerLevel;
+        return this.DangerLevel - AnotherLane.DangerLevel;
     }
 
 }
