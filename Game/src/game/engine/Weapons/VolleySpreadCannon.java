@@ -1,9 +1,7 @@
-package game.engine.Weapons.factory;
-
-import game.engine.Weapons.Weapons;
+package game.engine.Weapons;
 
 public class VolleySpreadCannon  extends Weapons{
-
+    public static final int WEAPON_CODE = 3;
     private final int MinRange;
     private final int MaxRange;
     public VolleySpreadCannon(int BaseDamage, int MinRange, int MaxRange) {
