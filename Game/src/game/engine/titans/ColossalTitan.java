@@ -1,4 +1,4 @@
-package game.engine.titans;
+package Game.Engine.Titans;
 
 public class ColossalTitan extends Titan{
     public static final int TITAN_CODE = 4;

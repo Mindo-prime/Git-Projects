@@ -1,4 +1,4 @@
-package game.engine.Weapons;
+package Game.Engine.Weapons;
 
 public abstract class Weapon {
     private int BaseDamage;

@@ -1,11 +1,13 @@
-package game.engine.dataloader;
+package Game.Engine.Dataloader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.HashMap;
 
-import game.engine.titans.TitanRegistry;
-import game.engine.Weapons.WeaponRegistry;
+import Game.Engine.Titans.TitanRegistry;
+import Game.Engine.Weapons.WeaponRegistry;
+
+
 
 public class DataLoader {
     private final static String Titan_File_Name = "Game/src/titans.csv";

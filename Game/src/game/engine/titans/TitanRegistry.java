@@ -1,4 +1,4 @@
-package game.engine.titans;
+package Game.Engine.Titans;
 
 public class TitanRegistry {
     private final int Code;

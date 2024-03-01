@@ -1,6 +1,6 @@
-package game.engine.Weapons.factory;
+package Game.Engine.Weapons.Factory;
 
-import game.engine.Weapons.Weapon;
+import Game.Engine.Weapons.Weapon;
 
 public class FactoryResponse {
     private final Weapon Weapon;

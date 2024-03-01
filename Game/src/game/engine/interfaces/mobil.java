@@ -1,4 +1,4 @@
-package game.engine.interfaces;
+package Game.Engine.Interfaces;
 
 public interface mobil {
     int getDistance();

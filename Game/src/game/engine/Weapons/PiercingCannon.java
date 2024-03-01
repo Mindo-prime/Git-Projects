@@ -1,4 +1,4 @@
-package game.engine.Weapons;
+package Game.Engine.Weapons;
 
 public class PiercingCannon extends Weapon {
     public static final int WEAPON_CODE = 1;

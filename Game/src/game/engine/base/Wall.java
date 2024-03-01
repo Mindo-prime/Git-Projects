@@ -1,4 +1,4 @@
-package game.engine.base;
+package Game.Engine.Base;
 
 public class Wall {
     private final int BaseHealth;

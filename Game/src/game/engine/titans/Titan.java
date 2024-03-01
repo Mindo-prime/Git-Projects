@@ -1,8 +1,8 @@
-package game.engine.titans;
+package Game.Engine.Titans;
 
-import game.engine.interfaces.attackee;
-import game.engine.interfaces.attacker;
-import game.engine.interfaces.mobil;
+import Game.Engine.Interfaces.attackee;
+import Game.Engine.Interfaces.attacker;
+import Game.Engine.Interfaces.mobil;
 
 public abstract class Titan implements attackee, attacker, mobil, Comparable<Titan> {
     private final int Basehealth;

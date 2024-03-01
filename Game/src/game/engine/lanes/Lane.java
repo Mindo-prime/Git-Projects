@@ -1,11 +1,13 @@
-package game.engine.lanes;
+package Game.Engine.Lanes;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
-import game.engine.Weapons.Weapon;
-import game.engine.base.Wall;
-import game.engine.titans.Titan;
+import Game.Engine.Base.Wall;
+import Game.Engine.Titans.Titan;
+import Game.Engine.Weapons.Weapon;
+
+
 
 public class Lane implements Comparable<Lane>{
     private final Wall LaneWall;

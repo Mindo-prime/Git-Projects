@@ -1,4 +1,4 @@
-package game.engine.titans;
+package Game.Engine.Titans;
 
 public class ArmoredTitan extends Titan {
     public static final int TITAN_CODE = 3;
