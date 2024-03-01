@@ -1,6 +1,6 @@
 package game.engine.Weapons;
 
-public class VolleySpreadCannon  extends Weapons{
+public class VolleySpreadCannon  extends Weapon{
     public static final int WEAPON_CODE = 3;
     private final int MinRange;
     private final int MaxRange;

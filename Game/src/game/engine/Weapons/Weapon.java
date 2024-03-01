@@ -1,12 +1,10 @@
 package game.engine.Weapons;
 
-public abstract class Weapons {
+public abstract class Weapon {
     private int BaseDamage;
-
-    public Weapons(int BaseDamage) {
+    public Weapon(int BaseDamage) {
         this.BaseDamage = BaseDamage;
     }
-
     public int getBaseDamage() {
         return BaseDamage;
     }
