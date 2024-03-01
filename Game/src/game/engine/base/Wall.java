@@ -7,12 +7,15 @@ public class Wall {
         this.BaseHealth = BaseHealth;
         CurrentHealth = BaseHealth;
     }
+
     public int getBaseHealth() {
         return BaseHealth;
     }
+
     public int getCurrentHealth() {
         return CurrentHealth;
     }
+
     public void setCurentHealth(int CurrentHealth) {
         this.CurrentHealth = CurrentHealth;
     }

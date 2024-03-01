@@ -5,6 +5,7 @@ public abstract class Weapon {
     public Weapon(int BaseDamage) {
         this.BaseDamage = BaseDamage;
     }
+    
     public int getBaseDamage() {
         return BaseDamage;
     }

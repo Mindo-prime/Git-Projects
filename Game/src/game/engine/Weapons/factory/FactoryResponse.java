@@ -9,9 +9,11 @@ public class FactoryResponse {
         this.Weapon = Weapon;
         this.RemainingResources = RemainingResources;
     }
+
     public Weapon getWeapon() {
         return Weapon;
     }
+    
     public int getRemainingResources() {
         return RemainingResources;
     }
