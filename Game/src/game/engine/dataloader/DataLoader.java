@@ -32,8 +32,8 @@ public class DataLoader {
                 }
             }
         }
-        catch (Exception e) {
-            e.printStackTrace();
+        catch (Exception Error) {
+            Error.printStackTrace();
         }
         return TitanHashMap;
     }
@@ -69,8 +69,8 @@ public class DataLoader {
                 }
             }
         }
-        catch (Exception e) {
-            e.printStackTrace();
+        catch (Exception Error) {
+            Error.printStackTrace();
         }
         return WeaponsHashMap;
     }
