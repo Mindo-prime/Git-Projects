@@ -1,4 +1,12 @@
 {
+    "java.debug.settings.onBuildFailureProceed": true,
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
     "java.test.defaultConfig": "org.junit.jupiter.api.Test",
     "java.test.config": {},
     "java.dependency.syncWithFolderExplorer": false,
