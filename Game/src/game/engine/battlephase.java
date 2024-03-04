@@ -1,6 +1,6 @@
 package Game.Engine;
 
-public enum battlephase {
+public enum BattlePhase {
     Early,
     Intense,
     Grumbling;
