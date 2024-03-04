@@ -1,3 +1,6 @@
 {
+    "java.test.defaultConfig": "org.junit.jupiter.api.Test",
+    "java.test.config": {},
+    "java.dependency.syncWithFolderExplorer": false,
     "java.dependency.packagePresentation": "hierarchical"
 }
