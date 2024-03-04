@@ -10,8 +10,8 @@ import Game.Engine.Weapons.WeaponRegistry;
 
 
 public class DataLoader {
-    private final static String Titan_File_Name = "Game/src/titans.csv";
-    private final static String Wepon_File_Name = "Game/src/weapons.csv";
+    private final static String Titan_File_Name = "Game/titans.csv";
+    private final static String Wepon_File_Name = "Game/weapons.csv";
     
     public static HashMap<Integer, TitanRegistry> readTitanRegistry() {
         HashMap<Integer, TitanRegistry> TitanHashMap = new HashMap<>();
