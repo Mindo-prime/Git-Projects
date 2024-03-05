@@ -36,7 +36,7 @@ public class DataLoader {
         return TitanHashMap;
     }
     public static HashMap<Integer, WeaponRegistry> readWeaponRegistry() {
-        HashMap<Integer, WeaponRegistry> WeaponsHashMap = new HashMap<>();
+        HashMap<Integer, WeaponRegistry> WeaponsHashMap = new HashMap<Integer, WeaponRegistry>();
         try(BufferedReader BRead = new BufferedReader(new FileReader(WEAPONS_FILE_NAME))){
             String Read;
             while ((Read = BRead.readLine()) != null ) {
