@@ -13,7 +13,7 @@ public class DataLoader {
     private static final String WEAPONS_FILE_NAME = "weapons.csv";
     public static HashMap<Integer, TitanRegistry> readTitanRegistry() throws IOException{
         HashMap<Integer, TitanRegistry> TitanHashMap = new HashMap<Integer, TitanRegistry>();
-        try(BufferedReader BRead = new BufferedReader(new FileReader(TITANS_FILE_NAME))){
+        try(BufferedReader BRead = new BufferedReader(new FileReader("titans.csv"))){
             String Read;
             while ((Read = BRead.readLine()) != null ) {
                 String[] fields = Read.split(",");
@@ -37,7 +37,7 @@ public class DataLoader {
     }
     public static HashMap<Integer, WeaponRegistry> readWeaponRegistry() {
         HashMap<Integer, WeaponRegistry> WeaponsHashMap = new HashMap<Integer, WeaponRegistry>();
-        try(BufferedReader BRead = new BufferedReader(new FileReader(WEAPONS_FILE_NAME))){
+        try(BufferedReader BRead = new BufferedReader(new FileReader("weapons.csv"))){
             String Read;
             while ((Read = BRead.readLine()) != null ) {
                 String[] fields = Read.split(",");
