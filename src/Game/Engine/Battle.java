@@ -41,6 +41,7 @@ public class Battle {
         this.originalLanes = new ArrayList<Lane>(InitialNumOflanes);
     }
 
+    @SuppressWarnings("unused")
     private void initializeLanes(int numOflanes) {
         for (int i = 0; i < numOflanes * 2; i++) {
             Lane Lane = new Lane(new Wall(WALL_BASE_HEALTH));
