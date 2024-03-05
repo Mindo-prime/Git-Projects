@@ -1,6 +1,6 @@
-package Game.Engine.Interfaces;
+package game.engine.interfaces;
 
-public interface mobil {
+public interface Mobil {
     int getDistance();
     void setDistance(int Distance);
     int getSpeed();

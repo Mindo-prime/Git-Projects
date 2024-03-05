@@ -1,50 +1,50 @@
-package Game.Engine.Titans;
+package game.engine.titans;
 
 public class TitanRegistry {
-    private final int Code;
-    private int BaseHealth;
-    private int BaseDamage;
-    private int HeightInMeters;
-    private int Speed;
-    private int ResourceValue;
-    private int DangerLevel;
+    private final int code;
+    private int baseHealth;
+    private int baseDamage;
+    private int heightInMeters;
+    private int speed;
+    private int resourcesValue;
+    private int dangerLevel;
 
-    public TitanRegistry(int Code, int BaseHealth, int BaseDamage, int HeightInMeters, int Speed, int ResourceValue, int DangerLevel) {
-        this.Code = Code;
-        this.BaseHealth = BaseHealth;
-        this.BaseDamage = BaseDamage;
-        this.HeightInMeters = HeightInMeters;
-        this.Speed = Speed;
-        this.ResourceValue = ResourceValue;
-        this.DangerLevel = DangerLevel;
+    public TitanRegistry(int code, int baseHealth, int baseDamage, int heightInMeters, int speed, int resourcesValue, int dangerLevel) {
+        this.code = code;
+        this.baseHealth = baseHealth;
+        this.baseDamage = baseDamage;
+        this.heightInMeters = heightInMeters;
+        this.speed = speed;
+        this.resourcesValue = resourcesValue;
+        this.dangerLevel = dangerLevel;
     }
 
     public int getCode() {
-        return Code;
+        return code;
     }
 
     public int getBaseHealth() {
-        return BaseHealth;
+        return baseHealth;
     }
 
     public int getBaseDamage() {
-        return BaseDamage;
+        return baseDamage;
     }
 
     public int getHeightInMeters() {
-        return HeightInMeters;
+        return heightInMeters;
     }
 
     public int getSpeed() {
-        return Speed;
+        return speed;
     }
 
-    public int getResourceValue() {
-        return ResourceValue;
+    public int getResourcesValue() {
+        return resourcesValue;
     }
 
     public int getDangerLevel() {
-        return DangerLevel;
+        return dangerLevel;
     }
     
 }

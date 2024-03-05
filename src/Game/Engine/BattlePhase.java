@@ -1,7 +1,7 @@
-package Game.Engine;
+package game.engine;
 
 public enum BattlePhase {
-    Early,
-    Intense,
-    Grumbling;
+    EARLY,
+    INTENSE,
+    GRUMBLING;
 }

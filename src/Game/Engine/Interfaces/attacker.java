@@ -1,5 +1,5 @@
-package Game.Engine.Interfaces;
+package game.engine.interfaces;
 
-public interface attacker {
+public interface Attacker {
     int getDamage();
 }

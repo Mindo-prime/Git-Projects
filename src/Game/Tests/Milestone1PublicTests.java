@@ -1,4 +1,4 @@
-package Game.Tests;
+package game.tests;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -1946,7 +1946,7 @@ public class Milestone1PublicTests {
 	public void testPhasesInBattleisStatic() throws NoSuchFieldException, SecurityException, ClassNotFoundException {
 		Field f = Class.forName(battlePath).getDeclaredField("PHASES_APPROACHING_TITANS");
 		int modifiers = f.getModifiers();
-		assertTrue(f.getName() + " variable in calss Game should be static", (Modifier.isStatic(modifiers)));
+		assertTrue(f.getName() + " variable in calss game should be static", (Modifier.isStatic(modifiers)));
 	}
 
 

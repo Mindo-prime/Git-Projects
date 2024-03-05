@@ -1,22 +1,34 @@
-package Game.Engine.Base;
+package game.engine.base;
 
-public class Wall {
-    private final int BaseHealth;
-    private int CurrentHealth;
-    public Wall(int BaseHealth) {
-        this.BaseHealth = BaseHealth;
-        CurrentHealth = BaseHealth;
+import game.engine.interfaces.Attackee;
+
+public class Wall implements Attackee{
+    private final int baseHealth;
+    private int currentHealth;
+    public Wall(int baseHealth) {
+        this.baseHealth = baseHealth;
+        currentHealth = baseHealth;
     }
 
     public int getBaseHealth() {
-        return BaseHealth;
+        return baseHealth;
     }
 
     public int getCurrentHealth() {
-        return CurrentHealth;
+        if (currentHealth < 0) {
+            return 0;
+        }
+        return currentHealth;
     }
 
-    public void setCurentHealth(int CurrentHealth) {
-        this.CurrentHealth = CurrentHealth;
+    public void setCurrentHealth(int currentHealth) {
+        if (currentHealth < 0) {
+            currentHealth = 0;
+        }
+        this.currentHealth = currentHealth;
+    }
+
+    public int getResourcesValue() {
+        return -1;
     }
 }

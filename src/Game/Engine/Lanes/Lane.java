@@ -1,46 +1,45 @@
-package Game.Engine.Lanes;
+package game.engine.lanes;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
-import Game.Engine.Base.Wall;
-import Game.Engine.Titans.Titan;
-import Game.Engine.Weapons.Weapon;
+import game.engine.base.Wall;
+import game.engine.titans.Titan;
+import game.engine.weapons.Weapon;
 
 
 
 public class Lane implements Comparable<Lane>{
-    private final Wall LaneWall;
-    private int DangerLevel;
-    private final PriorityQueue<Titan> Titans;
-    private final ArrayList<Weapon> Weapons;
-    public Lane(Wall LaneWall) {
-        this.LaneWall = LaneWall;
-        DangerLevel = 0;
-        Titans = new PriorityQueue<Titan>();
-        Weapons = new ArrayList<Weapon>();
+    private final Wall laneWall;
+    private int dangerLevel;
+    private final PriorityQueue<Titan> titans;
+    private final ArrayList<Weapon> weapons;
+    public Lane(Wall laneWall) {
+        this.laneWall = laneWall;
+        dangerLevel = 0;
+        titans = new PriorityQueue<Titan>();
+        weapons = new ArrayList<Weapon>();
     }
     public int getDangerLevel() {
-        return DangerLevel;
+        return dangerLevel;
     }
 
     public Wall getLaneWall() {
-        return LaneWall;
+        return laneWall;
     }
 
     public PriorityQueue<Titan> getTitans() {
-        return Titans;
+        return titans;
     }
     public ArrayList<Weapon> getWeapons() {
-        return Weapons;
+        return weapons;
     }
     
-    public void setDangerLevel(int DangerLevel) {
-        this.DangerLevel = DangerLevel;
+    public void setDangerLevel(int dangerLevel) {
+        this.dangerLevel = dangerLevel;
     }
     
     public int compareTo(Lane AnotherLane) {
-        return this.DangerLevel - AnotherLane.DangerLevel;
+        return this.dangerLevel - AnotherLane.dangerLevel;
     }
-
 }

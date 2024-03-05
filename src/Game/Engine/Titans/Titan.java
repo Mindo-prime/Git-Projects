@@ -1,84 +1,87 @@
-package Game.Engine.Titans;
+package game.engine.titans;
 
-import Game.Engine.Interfaces.attackee;
-import Game.Engine.Interfaces.attacker;
-import Game.Engine.Interfaces.mobil;
+import game.engine.interfaces.Attackee;
+import game.engine.interfaces.Attacker;
+import game.engine.interfaces.Mobil;
 
-public abstract class Titan implements attackee, attacker, mobil, Comparable<Titan> {
-    private final int Basehealth;
-    private int CurrentHealth;
-    private final int Basedamage;
-    private final int HeightInMeters;
-    private int DistanceFromBase;
-    private int Speed;
-    private final int ResourceValue;
-    private final int DangerLevel;
+public abstract class Titan implements Attackee, Attacker, Mobil, Comparable<Titan> {
+    private final int baseHealth;
+    private int currentHealth;
+    private final int baseDamage;
+    private final int heightInMeters;
+    private int distanceFromBase;
+    private int speed;
+    private final int resourcesValue;
+    private final int dangerLevel;
     
-    public Titan(int Basehealth, int Basedamage, int HeightInMeters, int DistanceFromBase, int Speed, int ResourceValue, int DangerLevel) {
-        this.Basehealth = Basehealth;
-        this.Basedamage = Basedamage;
-        this.HeightInMeters = HeightInMeters;
-        this.DistanceFromBase = DistanceFromBase;
-        this.Speed = Speed;
-        this.ResourceValue = ResourceValue;
-        this.DangerLevel = DangerLevel;
-        CurrentHealth = Basehealth;
+    public Titan(int baseHealth, int baseDamage, int heightInMeters, int distanceFromBase, int speed, int resourcesValue, int dangerLevel) {
+        this.baseHealth = baseHealth;
+        this.baseDamage = baseDamage;
+        this.heightInMeters = heightInMeters;
+        this.distanceFromBase = distanceFromBase;
+        this.speed = speed;
+        this.resourcesValue = resourcesValue;
+        this.dangerLevel = dangerLevel;
+        currentHealth = baseHealth;
     }
 
-    public void setCurrentHealth(int CurrentHealth) {
-        this.CurrentHealth = CurrentHealth;
+    public void setCurrentHealth(int currentHealth) {
+        if (currentHealth < 0) {
+            currentHealth = 0;
+        }
+        this.currentHealth = currentHealth;
     }
 
     public int getCurrentHealth() {
-        return CurrentHealth;
+        return currentHealth;
     }
 
     public int getDamage() {
-        return Basedamage;
+        return baseDamage;
     }
 
     public int getSpeed() {
-        return Speed;
+        return speed;
     }
 
-    public void setSpeed(int Speed) {
-        this.Speed = Speed;
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 
-    public int getResouceValue() {
-        return ResourceValue;
+    public int getResoucesValue() {
+        return resourcesValue;
+    }
+    
+    public int getResourcesValue() {
+        return resourcesValue;
     }
 
     public int getBasehealth() {
-        return Basehealth;
+        return baseHealth;
     }
 
     public int getBasedamage() {
-        return Basedamage;
+        return baseDamage;
     }
 
     public int getHeightInMeters() {
-        return HeightInMeters;
-    }
-
-    public int getResourceValue() {
-        return ResourceValue;
+        return heightInMeters;
     }
 
     public int getDangerLevel() {
-        return DangerLevel;
+        return dangerLevel;
     }
 
     public int getDistance() {
-        return DistanceFromBase;
+        return distanceFromBase;
     }
 
     public void setDistance(int Distance) {
-        DistanceFromBase = Distance;
+        distanceFromBase = Distance;
     }
 
     public int compareTo(Titan anotherTitan) {
-        return this.DistanceFromBase - anotherTitan.DistanceFromBase;
+        return this.distanceFromBase - anotherTitan.distanceFromBase;
     }
     
 }

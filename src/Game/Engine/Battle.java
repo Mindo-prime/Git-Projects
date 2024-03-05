@@ -1,128 +1,128 @@
-package Game.Engine;
+package game.engine;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
-import Game.Engine.Base.Wall;
-import Game.Engine.Dataloader.DataLoader;
-import Game.Engine.Lanes.Lane;
-import Game.Engine.Titans.Titan;
-import Game.Engine.Titans.TitanRegistry;
-import Game.Engine.Weapons.Factory.WeaponFactory;
+import game.engine.base.Wall;
+import game.engine.dataloader.DataLoader;
+import game.engine.lanes.Lane;
+import game.engine.titans.Titan;
+import game.engine.titans.TitanRegistry;
+import game.engine.weapons.factory.WeaponFactory;
 
 public class Battle {
-    private final int[][] Phase_Approaching_Titans;
-    private final int Wall_Base_Health;
-    private int NumberOfTurns;
-    private int ResourceGathered;
-    private BattlePhase BattlePhase;
-    private int NumberOfTitansPerTurn;
-    private int Score;
-    private int TitanSpawnDistance;
-    private final WeaponFactory WeaponFactory;
-    private final HashMap<Integer, TitanRegistry> TitanArchives;
-    private final ArrayList<Titan> Approaching_Titans;
-    private final PriorityQueue<Lane> Lanes;
-    private final ArrayList<Lane> OriginalLanes;
-    public Battle(int NumberOfTurns, int Score, int TitanSpawnDistance, int InitialNumOfLanes, int InitialResourcesPerLane) throws IOException{
-        this.Phase_Approaching_Titans = new int[][]{{1},{2},{3},{4}};
-        this.Wall_Base_Health = 10000;
-        this.NumberOfTurns = NumberOfTurns;
-        this.ResourceGathered = InitialNumOfLanes * InitialResourcesPerLane;
-        this.BattlePhase = BattlePhase.Early;
-        this.NumberOfTitansPerTurn = 1;
-        this.Score = Score;
-        this.TitanSpawnDistance = TitanSpawnDistance;
-        this.WeaponFactory = new WeaponFactory();
-        this.TitanArchives = DataLoader.readTitanRegistry();
-        this.Approaching_Titans = new ArrayList<Titan>();
-        this.Lanes = new PriorityQueue<Lane>();
-        this.OriginalLanes = new ArrayList<Lane>(InitialNumOfLanes);
+    private  static final int[][] PHASES_APPROACHING_TITANS = {{1, 1, 1, 2, 1, 3, 4}, {2, 2, 2, 1, 3, 3, 4}, {4, 4, 4, 4, 4, 4, 4}};
+    private final int WALL_BASE_HEALTH;
+    private int numberOfTurns;
+    private int resourcesGathered;
+    private BattlePhase battlePhase;
+    private int numberOfTitansPerTurn;
+    private int score;
+    private int titanSpawnDistance;
+    private final WeaponFactory weaponFactory;
+    private final HashMap<Integer, TitanRegistry> titansArchives;
+    private final ArrayList<Titan> approachingTitans;
+    private final PriorityQueue<Lane> lanes;
+    private final ArrayList<Lane> originalLanes;
+    public Battle(int numberOfTurns, int score, int titanSpawnDistance, int InitialNumOflanes, int InitialResourcesPerLane) throws IOException{
+        this.WALL_BASE_HEALTH = 10000;
+        this.numberOfTurns = numberOfTurns;
+        this.resourcesGathered = InitialNumOflanes * InitialResourcesPerLane;
+        this.battlePhase = BattlePhase.EARLY;
+        this.numberOfTitansPerTurn = 1;
+        this.score = score;
+        this.titanSpawnDistance = titanSpawnDistance;
+        this.weaponFactory = new WeaponFactory();
+        this.titansArchives = DataLoader.readTitanRegistry();
+        this.approachingTitans = new ArrayList<Titan>();
+        this.lanes = new PriorityQueue<Lane>();
+        this.originalLanes = new ArrayList<Lane>(InitialNumOflanes);
     }
 
-    private void initializeLanes(int numOfLanes) {
-        for (int i = 0; i < numOfLanes; i++) {
-            Lane Lane = new Lane(new Wall(Wall_Base_Health));
-            Lanes.add(Lane);
-            OriginalLanes.add(Lane);
+    private void initializeLanes(int numOflanes) {
+        for (int i = 0; i < numOflanes; i++) {
+            Lane Lane = new Lane(new Wall(WALL_BASE_HEALTH));
+            lanes.add(Lane);
+            originalLanes.add(Lane);
         }
     }
 
-    public void setNumberOfTurns(int numberOfTurns) {
-        NumberOfTurns = numberOfTurns;
+    public ArrayList<Titan> getApproachingTitans() {
+        return approachingTitans;
     }
 
-    public void setResourceGathered(int resourceGathered) {
-        ResourceGathered = resourceGathered;
+    public void setNumberOfTurns(int numberOfTurns) {
+        this.numberOfTurns = numberOfTurns;
+    }
+
+    public void setResourcesGathered(int resourceGathered) {
+        resourcesGathered = resourceGathered;
     }
 
     public void setBattlePhase(BattlePhase battlePhase) {
-        BattlePhase = battlePhase;
+        this.battlePhase = battlePhase;
     }
 
     public void setNumberOfTitansPerTurn(int numberOfTitansPerTurn) {
-        NumberOfTitansPerTurn = numberOfTitansPerTurn;
+        this.numberOfTitansPerTurn = numberOfTitansPerTurn;
     }
 
     public void setScore(int score) {
-        Score = score;
+        this.score = score;
     }
 
     public void setTitanSpawnDistance(int titanSpawnDistance) {
-        TitanSpawnDistance = titanSpawnDistance;
+        this.titanSpawnDistance = titanSpawnDistance;
     }
 
     public int[][] getPhase_Approaching_Titans() {
-        return Phase_Approaching_Titans;
+        return PHASES_APPROACHING_TITANS;
     }
-    
+
     public int getWall_Base_Health() {
-        return Wall_Base_Health;
+        return WALL_BASE_HEALTH;
     }
 
     public int getNumberOfTurns() {
-        return NumberOfTurns;
+        return numberOfTurns;
     }
 
-    public int getResourceGathered() {
-        return ResourceGathered;
+    public int getResourcesGathered() {
+        return resourcesGathered;
     }
 
     public BattlePhase getBattlePhase() {
-        return BattlePhase;
+        return battlePhase;
     }
 
     public int getNumberOfTitansPerTurn() {
-        return NumberOfTitansPerTurn;
+        return numberOfTitansPerTurn;
     }
 
     public int getScore() {
-        return Score;
+        return score;
     }
 
     public int getTitanSpawnDistance() {
-        return TitanSpawnDistance;
+        return titanSpawnDistance;
     }
 
     public WeaponFactory getWeaponFactory() {
-        return WeaponFactory;
+        return weaponFactory;
     }
 
-    public HashMap<Integer, TitanRegistry> getTitanArchives() {
-        return TitanArchives;
-    }
-
-    public ArrayList<Titan> getApproaching_Titans() {
-        return Approaching_Titans;
+    public HashMap<Integer, TitanRegistry> getTitansArchives() {
+        return titansArchives;
     }
 
     public PriorityQueue<Lane> getLanes() {
-        return Lanes;
+        return lanes;
     }
 
     public ArrayList<Lane> getOriginalLanes() {
-        return OriginalLanes;
+        return originalLanes;
     }
+
 }

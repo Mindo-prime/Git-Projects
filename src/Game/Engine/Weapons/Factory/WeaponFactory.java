@@ -1,18 +1,17 @@
-package Game.Engine.Weapons.Factory;
+package game.engine.weapons.factory;
 
 import java.io.IOException;
 import java.util.HashMap;
 
-import Game.Engine.Weapons.WeaponRegistry;
-import Game.Engine.Dataloader.DataLoader;
+import game.engine.weapons.WeaponRegistry;
+import game.engine.dataloader.DataLoader;
 
 public class WeaponFactory {
-    private final HashMap<Integer, WeaponRegistry> WeaponShop;
+    private final HashMap<Integer, WeaponRegistry> weaponShop;
     public WeaponFactory() throws IOException{
-        this.WeaponShop = DataLoader.readWeaponRegistry();
+        this.weaponShop = DataLoader.readWeaponRegistry();
     }
-
     public HashMap<Integer, WeaponRegistry> getWeaponShop() {
-        return WeaponShop;
+        return weaponShop;
     }
 }

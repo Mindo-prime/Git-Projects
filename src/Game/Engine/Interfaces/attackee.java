@@ -1,7 +1,7 @@
-package Game.Engine.Interfaces;
+package game.engine.interfaces;
 
-public interface attackee {
+public interface Attackee {
     int getCurrentHealth();
-    void setCurrentHealth(int setCurrentHealth);
-    int getResourceValue();
+    void setCurrentHealth(int Health);
+    int getResourcesValue();
 }
