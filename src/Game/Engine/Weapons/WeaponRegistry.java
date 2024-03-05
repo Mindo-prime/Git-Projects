@@ -2,15 +2,19 @@ package game.engine.weapons;
 
 public class WeaponRegistry {
     private final int code;
-    private int price;
-    private int damage;
-    private String name;
-    private int maxRange;
-    private int minRange;
+    private final int price;
+    private final int damage;
+    private final String name;
+    private final int maxRange;
+    private final int minRange;
 
     public WeaponRegistry(int code, int price) {
         this.code = code;
         this.price = price;
+        this.damage = 0;
+        this.name = "";
+        this.maxRange = 0;
+        this.minRange = 0;
     }
 
     public WeaponRegistry(int code, int price, int damage, String name) {
@@ -18,6 +22,8 @@ public class WeaponRegistry {
         this.price = price;
         this.damage = damage;
         this.name = name;
+        this.maxRange = 0;
+        this.minRange = 0;
     }
 
     public WeaponRegistry(int code, int price, int damage, String name, int maxRange, int minRange) {
@@ -51,25 +57,5 @@ public class WeaponRegistry {
 
     public int getMinRange() {
         return minRange;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public void setDamage(int damage) {
-        this.damage = damage;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setMaxRange(int maxRange) {
-        this.maxRange = maxRange;
-    }
-
-    public void setminRange(int minRange) {
-        this.minRange = minRange;
     }
 }
