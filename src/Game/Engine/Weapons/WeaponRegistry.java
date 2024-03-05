@@ -37,7 +37,7 @@ public class WeaponRegistry {
         return price;
     }
 
-    public int getdamage() {
+    public int getDamage() {
         return damage;
     }
 

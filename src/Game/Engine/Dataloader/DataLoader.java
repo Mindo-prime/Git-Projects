@@ -13,7 +13,7 @@ public class DataLoader {
     private static final String WEAPONS_FILE_NAME = "weapons.csv";
     public static HashMap<Integer, TitanRegistry> readTitanRegistry() throws IOException{
         HashMap<Integer, TitanRegistry> TitanHashMap = new HashMap<Integer, TitanRegistry>();
-        try(BufferedReader BRead = new BufferedReader(new FileReader("titans.csv"))){
+        try(BufferedReader BRead = new BufferedReader(new FileReader(TITANS_FILE_NAME))){
             String Read;
             while ((Read = BRead.readLine()) != null ) {
                 String[] fields = Read.split(",");
@@ -37,7 +37,7 @@ public class DataLoader {
     }
     public static HashMap<Integer, WeaponRegistry> readWeaponRegistry() {
         HashMap<Integer, WeaponRegistry> WeaponsHashMap = new HashMap<Integer, WeaponRegistry>();
-        try(BufferedReader BRead = new BufferedReader(new FileReader("weapons.csv"))){
+        try(BufferedReader BRead = new BufferedReader(new FileReader(WEAPONS_FILE_NAME))){
             String Read;
             while ((Read = BRead.readLine()) != null ) {
                 String[] fields = Read.split(",");
@@ -58,6 +58,12 @@ public class DataLoader {
                     int damage = Integer.parseInt(fields[2]);
                     String name = fields[3];
                     WeaponRegistry = new WeaponRegistry(code, price, damage, name);
+                    WeaponsHashMap.put(code, WeaponRegistry);
+                }
+                else if (fields.length == 4) {
+                    int code = Integer.parseInt(fields[0]);
+                    int price = Integer.parseInt(fields[1]);
+                    WeaponRegistry = new WeaponRegistry(code, price);
                     WeaponsHashMap.put(code, WeaponRegistry);
                 }
             }

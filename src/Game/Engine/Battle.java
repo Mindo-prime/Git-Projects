@@ -13,7 +13,7 @@ import game.engine.titans.TitanRegistry;
 import game.engine.weapons.factory.WeaponFactory;
 
 public class Battle {
-    private  static final int[][] PHASES_APPROACHING_TITANS = {{1, 1, 1, 2, 1, 3, 4}, {2, 2, 2, 1, 3, 3, 4}, {4, 4, 4, 4, 4, 4, 4}};
+    private  static final int[][] PHASES_APPROACHING_TITANS = new int[][]{{1, 1, 1, 2, 1, 3, 4}, {2, 2, 2, 1, 3, 3, 4}, {4, 4, 4, 4, 4, 4, 4}};
     private final int WALL_BASE_HEALTH;
     private int numberOfTurns;
     private int resourcesGathered;
@@ -42,7 +42,7 @@ public class Battle {
     }
 
     private void initializeLanes(int numOflanes) {
-        for (int i = 0; i < numOflanes; i++) {
+        for (int i = 0; i < numOflanes * 2; i++) {
             Lane Lane = new Lane(new Wall(WALL_BASE_HEALTH));
             lanes.add(Lane);
             originalLanes.add(Lane);
