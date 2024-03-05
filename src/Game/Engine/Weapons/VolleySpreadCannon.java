@@ -17,4 +17,9 @@ public class VolleySpreadCannon  extends Weapon{
     public int getMaxRange() {
         return maxRange;
     }
+
+    public static int getWeaponCode() {
+        return WEAPON_CODE;
+    }
+    
 }
