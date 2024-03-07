@@ -3904,7 +3904,9 @@ public class Milestone1PublicTests {
 					|| containsMethodName(methods, methodName);
 
 		}
-		assertFalse("The " + methodName + " method should not be implemented in a subclasses.", methodIsInSubclasses);
+		assertFalse("The " + methodName
+				+ " method should not be implemented in a subclasses.",
+				methodIsInSubclasses);
 	}
 	private void testClassIsSubclass(Class subClass, Class superClass) {
 		assertEquals(subClass.getSimpleName() + " class should be a subclass from " + superClass.getSimpleName() + ".",
@@ -4738,5 +4740,4 @@ public class Milestone1PublicTests {
 			fail("Exception occurred: " + e.getMessage());
 		}
 	}
-
 }

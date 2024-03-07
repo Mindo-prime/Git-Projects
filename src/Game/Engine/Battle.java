@@ -42,7 +42,7 @@ public class Battle {
     }
 
     private void initializeLanes(int numOflanes) {
-        for (int i = 0; i < numOflanes * 2; i++) {
+        for (int i = 0; i < numOflanes; i++) {
             Lane Lane = new Lane(new Wall(WALL_BASE_HEALTH));
             lanes.add(Lane);
             originalLanes.add(Lane);
