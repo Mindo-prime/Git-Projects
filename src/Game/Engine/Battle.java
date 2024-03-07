@@ -38,9 +38,9 @@ public class Battle {
         this.approachingTitans = new ArrayList<Titan>();
         this.lanes = new PriorityQueue<Lane>();
         this.originalLanes = new ArrayList<Lane>(InitialNumOflanes);
+        this.initializeLanes(InitialNumOflanes);
     }
 
-    @SuppressWarnings("unused")
     private void initializeLanes(int numOflanes) {
         for (int i = 0; i < numOflanes * 2; i++) {
             Lane Lane = new Lane(new Wall(WALL_BASE_HEALTH));
