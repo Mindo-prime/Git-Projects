@@ -54,10 +54,16 @@ public class Battle {
     }
 
     public void setNumberOfTurns(int numberOfTurns) {
+        if (numberOfTurns < 0) {
+            numberOfTurns = 0;
+        }
         this.numberOfTurns = numberOfTurns;
     }
 
     public void setResourcesGathered(int resourceGathered) {
+        if (resourceGathered < 0) {
+            resourceGathered = 0;
+        }
         resourcesGathered = resourceGathered;
     }
 
@@ -66,14 +72,23 @@ public class Battle {
     }
 
     public void setNumberOfTitansPerTurn(int numberOfTitansPerTurn) {
+        if (numberOfTitansPerTurn < 0) {
+            numberOfTitansPerTurn = 0;
+        }
         this.numberOfTitansPerTurn = numberOfTitansPerTurn;
     }
 
     public void setScore(int score) {
+        if (score < 0) {
+            score = 0;
+        }
         this.score = score;
     }
 
     public void setTitanSpawnDistance(int titanSpawnDistance) {
+        if (titanSpawnDistance < 0) {
+            titanSpawnDistance = 0;
+        }
         this.titanSpawnDistance = titanSpawnDistance;
     }
 

@@ -15,9 +15,6 @@ public class Wall implements Attackee{
     }
 
     public int getCurrentHealth() {
-        if (currentHealth < 0) {
-            return 0;
-        }
         return currentHealth;
     }
 

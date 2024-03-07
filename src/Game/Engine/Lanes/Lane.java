@@ -36,6 +36,9 @@ public class Lane implements Comparable<Lane>{
     }
     
     public void setDangerLevel(int dangerLevel) {
+        if (dangerLevel < 0) {
+            dangerLevel = 0;
+        }
         this.dangerLevel = dangerLevel;
     }
     

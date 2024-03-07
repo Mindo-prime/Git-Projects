@@ -45,6 +45,9 @@ public abstract class Titan implements Attackee, Attacker, Mobil, Comparable<Tit
     }
 
     public void setSpeed(int speed) {
+        if (speed < 0) {
+            speed = 0;
+        }
         this.speed = speed;
     }
 
@@ -77,6 +80,9 @@ public abstract class Titan implements Attackee, Attacker, Mobil, Comparable<Tit
     }
 
     public void setDistance(int Distance) {
+        if (Distance < 0) {
+            Distance = 0;
+        }
         distanceFromBase = Distance;
     }
 
