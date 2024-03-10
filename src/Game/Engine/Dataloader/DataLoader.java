@@ -60,7 +60,7 @@ public class DataLoader {
                     WeaponRegistry = new WeaponRegistry(code, price, damage, name);
                     WeaponsHashMap.put(code, WeaponRegistry);
                 }
-                else if (fields.length == 4) {
+                else if (fields.length == 2) {
                     int code = Integer.parseInt(fields[0]);
                     int price = Integer.parseInt(fields[1]);
                     WeaponRegistry = new WeaponRegistry(code, price);
